@@ -1,53 +1,46 @@
 ---
-title: 'Billing Methods'
+title: '计费说明'
 ---
 
-## On-demand Pricing
-### Introduction
-On-Demand pricing is designed to offer users the flexibility to access computational resources without any long-term commitments or upfront costs. This pricing model is ideal for users who require compute power on an as-needed basis, whether it's for short-term projects, variable workloads, or unpredictable processing demands.
-Billing Structure of On-Demand Pricing
-The On-Demand pricing model is straightforward and easy to understand. The cost is calculated using the following formula:
-- **Cost**: This is the total amount you'll be charged for using a cloud computing instance.
-- **Instance pricing**: This is the hourly rate you pay for a specific type of instance, which depends on the kind of GPU and its configuration.
-- **Billing time**: Billing is calculated on a per-second basis, reflecting the exact amount of compute time used. Although the cost computation is precise to the second, billing statements are issued hourly. 
-- **Number of GPUs**: This is the number of graphics processing units (GPUs) assigned to your instance. The more GPUs you use, the more computing power you have available, but also the higher your cost will be.
-Key Features of On-Demand Pricing
-- **Immediate Access**: With On-Demand pricing, you can start and stop instances as needed, providing immediate access to computational resources.
-- **No Commitment**: There are no contracts or long-term commitments, making it an excellent option for users who do not want to be tied down by fixed-term agreements.
-- **Pay-as-You-Go**: You only pay for the time you use the compute resources, which can be cost-effective for sporadic or unpredictable usage patterns.
-How On-Demand Pricing Works in Practice
-- **Instance Creation**: The billing clock starts as soon as you create and launch your instance on the platform.
-- **Usage Tracking**: InfrAI's system tracks the usage of your instances second by second, ensuring that your billing accurately reflects the actual compute time used.
-- **Stopping and Deleting**: When you no longer need the instance, you can stop or delete it. The billing stops at the moment you perform this action, preventing unnecessary charges.
-Advantages of On-Demand Pricing for Different Scenarios
-- **Short-Term Projects**: For projects that have a limited duration, On-Demand pricing allows you to match your compute costs to the project timeline.
-- **Variable Workloads**: If your workloads fluctuate, On-Demand pricing provides the flexibility to scale up or down as needed without incurring fixed costs.
-- **Testing and Development**: For testing new applications or developing code, On-Demand pricing offers a cost-effective way to access the necessary compute resources without long-term financial commitments.
+派欧算力云计费模块旨在为用户提供一个灵活、透明的计费系统，支持多种计费方式。
 
-##  Savings Plans
-### Introduction
-Savings Plans are designed for users who can predict their compute resource needs over a set period. By prepaying for a certain duration, users can enjoy discounted rates on GPU instances, leading to significant cost savings. These plans are an excellent choice for users with steady and long-term compute requirements.
-### How Savings Plans Work
-- **Upfront Commitment**: Users pay a predetermined amount upfront for a commitment to use GPU cloud  services for a set period, typically ranging from 1 to 6 months.
-- **Discounted Rates**: The commitment comes with a discount on the hourly rate for the GPU instances, making it more cost-effective than the On-Demand pricing.
-- **Expiration and Renewal Strategy**: Savings Plans automatically apply the discounted rate to your compute usage upon activation, with no automatic renewals. Instead, we'll send a reminder email as your plan nears expiration, giving you the option to renew manually. If you choose not to renew, or once your plan expires, your instances will shift to the regular On-Demand pricing. Excess usage beyond your Savings Plan commitment is also billed at standard On-Demand rates, ensuring you're only charged for the resources you actually use. 
-### Benefits of Savings Plans
-- **Cost Savings**: The most significant advantage of Savings Plans is the substantial discount on the hourly rate for GPU instances, leading to considerable savings over time.
-- **Predictable Expenses**: By prepaying for a set period, users can better manage and predict their compute expenses, which is beneficial for budgeting purposes.
-- **Flexibility**: Users have the option to apply the Savings Plan to any uniform specification new instance they create during the commitment period, providing flexibility in resource allocation.
-### Usage and Management of Savings Plans
-- **Instance Association**: Savings Plans are tied to specific instance types and the number of GPUs. When a user deploys an instance, the plan is automatically applied to the billing for that instance.
-- **Plan Management**: Users can manage their Savings Plans through the Infrai platform, making it easy to track usage, renewal dates, and associated instances.
-- **Idle Resources**: If an instance associated with a Savings Plan is shut down, the plan remains active and can be applied to a new instance without any additional charges.
-### Key Considerations
-- **Non-Refundable**: It's important to note that the upfront payment for a Savings Plan is non-refundable. Therefore, users should be confident in their compute needs before committing to a plan.
-- **Fixed Duration**: The duration of the Savings Plan is fixed and does not extend or shorten with changes in instance usage. Users should plan their compute requirements accordingly.
-In summary, Infrai's Savings Plans provide a cost-effective and flexible solution for users with consistent compute needs. By committing to a usage period, users can enjoy discounted rates and better manage their cloud compute expenses. With straightforward management tools and the ability to apply the plan to any new instances, Savings Plans offer an excellent way to optimize your cloud compute investment.
-## Storage Billing
-we offer a comprehensive suite of storage solutions, tailored to meet the diverse needs of our users. Here's a breakdown of our storage options and their respective pricing:
-Container Storage (Root File System Storage)
-We provide an initial **30GB** of free container storage for each user. This storage is specifically designed to hold the root file system of your instances. Should your usage exceed this free tier, you will be billed at a rate of **$0.005/GB** per day for any additional storage used.
-### Volume Storage
-In addition to container storage, we also offer **60GB** of free Volume Storage. This type of storage is ideal for temporary data that requires quick access by your instances. Beyond the free allocation, the cost for extra usage is calculated based on the volume and duration of use, priced at **$0.005/GB** per day.
-### Network Storage
-Unlike container and local storage, network storage does not come with a free tier. It is billed solely based on usage volume and the time period it is utilized. Network storage is competitively priced at **$0.002/GB** per day. Network Storage is designed for versatility, allowing you to mount it on any instance within the same cluster for convenient data migration and flexible usage.
+包括但不限于预付费和后付费模式，确保用户能够根据自己的需求和使用情况选择最合适的计费方式。
+
+## 计费项
+
+计费项即计费资源，派欧算力云产品的计费项包括实例规格、本地存储、云存储等资源，其中涉及的计费项介绍如下：
+
+| **计费项** | **说明**                                                  | **支持的计费方式**                         |
+| ---------- | --------------------------------------------------------- | ------------------------------------------ |
+| 实例规格   | 指根据所选实例规格收取计算资源（vCPU、GPU和内存）的费用。 | 包年包月（即预付费）按量计费（即后付费）   |
+| 本地存储   | 本地存储（如有）的费用。                                  | 与实例规格绑定购买，跟随实例规格的计费方式 |
+| 云存储     | 云存储根据单价、容量和时长收取费用。                      | 按量计费                                   |
+
+## 计费方式
+
+派欧算力云产品提供以下计费方式，适用资源和功能对比如下表所示，您可以按需选择。
+
+**说明**
+
+- 计算资源为实例的基础配置，所以按量计费实例即使未运行业务，其计算资源也会按照计费周期持续计费，除非关机。
+- 本地存储与特定实例规格绑定，不支持单独购买，费用已计入实例规格费用。
+
+### 实例计费方式
+
+| **计费方式** | **说明**                                                         | **计费逻辑**                                                                                                                                                                                                                                                                                                                                                              | **价格特点**                             | **适用场景**                 |
+| ------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------- |
+| 包年包月     | 先付费后使用，可以更大程度节省支出。                             | 费用=实例规格单价 × 购买时长  × 卡数<br/>购买时长分为：<br/>包天=24h<br/>包周=7 × 24h<br/>包月=30天 × 24h<br/>包年=自然年 × 24h<br/>购买时长：UTC+8 时间为准，一个计费周期的起点为实例成功创建的时间（精确到秒），终点为购买时长的到期时间；<br/>购买的时长到期后，如未续费，则实例自动关机，数据保留7日，7日后实例数据将被清除且不可恢复！预付费实例，到期前不支持删除。 | 相比按量计费价格更优惠，一般有额外折扣。 | 稳定的长期业务。             |
+| 按量计费     | 先使用后付费，无需提前购买大量资源，可以随时按需开通和释放资源。 | 费用=实例规格单价 × 计费时长 × 卡数；<br/>计费时长精确到秒，按小时结算，结算时按实际使用秒数计价，费用四舍五入；<br/>计费的起点以实例创建成功进入运行状态的时间点为准，停止计费时间为操作实例关机/删除的时间（在平台操作了关机即停止计费）；<br/>实例中途非运行状态，也不计费，恢复运行状态后继续计费；                                                                   | 相比其它方式，每小时单价最高。           | 短期具有大幅增长业务的场景。 |
+
+### 本地存储计费方式
+
+| **计费方式**                               | **计费逻辑**                                                                                                                                                                                   |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 本地存储与特定实例规格绑定，不支持单独购买 | 有一定免费容量，免费容量见创建实例页面描述存储扩容费用=扩容容量 (GB) × 单价 × 时长按量计费实例的扩容，会以当天扩容的最高容量在 24 点计费，无论该实例在当天是否关机，计费时长为实例创建成功开始 |
+
+## 价格详情
+
+您可以在[算力市场](https://console.paigpu.com/#/gpu-cloud)查看实例的价格及其配置项（本地存储）费用。具体费用请以算力市场创建实例页面实际下单结果为准。
+
+
+

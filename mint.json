@@ -56,7 +56,8 @@
       "group": "Billing",
       "pages": [
         "billing/payment-methods",
-        "billing/billing-methods"
+        "billing/billing-methods",
+        "billing/sku"
       ]
     },
     {
