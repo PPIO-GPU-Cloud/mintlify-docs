@@ -23,15 +23,8 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://www.infrai.com"
+    "url": "https://www.paigpu.com"
   },
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.paigpu.com"
-    }
-  ],
   "navigation": [
     {
       "group": "Quickstart",
