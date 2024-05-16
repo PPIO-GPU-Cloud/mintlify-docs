@@ -1,0 +1,36 @@
+---
+title: 加速服务
+---
+
+## 加速服务支持范围
+
+- [huggingface.co](http://huggingface.co/) 
+- [github.com](http://github.com/)  
+- [githubusercontent.com](http://githubusercontent.com/) 
+- [githubassets.com](http://githubassets.com/)
+
+## 开启加速
+
+```bash
+source  /etc/proxy/net_proxy
+```
+
+
+
+## 关闭加速
+
+```bash
+unset https_proxy && unset http_proxy
+```
+
+
+
+## 效果对比
+
+### 加速前
+
+![](https://gpu-cloud-1312767721.cos.ap-shanghai.myqcloud.com/docs/acc01.png)
+
+### 加速后
+
+![](https://gpu-cloud-1312767721.cos.ap-shanghai.myqcloud.com/docs/acc02.png)

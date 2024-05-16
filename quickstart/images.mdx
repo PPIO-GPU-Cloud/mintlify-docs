@@ -1,0 +1,28 @@
+---
+title: 镜像管理
+---
+
+您可以在控制台-[我的镜像](https://console.paigpu.com/#/image)页面查看您的自定义镜像
+
+## 上传镜像	
+
+您可以将您的镜像上传到派欧算力云镜像仓库，从而实现对自定义镜像的统一管理
+
+1. 进入个人中心获取您的镜像上传凭证
+
+2. 在您镜像所在的 docker 环境，进行如下操作
+
+   1. 登录派欧算力云镜像服务 Docker Registry
+
+   ```
+   docker login image.paigpu.com --username=xgmdasdbroksktnnznsisri --password=G7Zn84EQ6ojqWm6CBeaiBYUzpCt0vaVaxaQgChl9wbSC6QsadsmqfeDNadqZZsKJtxVgwkdAWsQZOhDySVMbO5rRxvMbeAmy1NWgzQSGBvuO35S539gJv4iMI3bbD5m2yKQes59
+   ```
+
+   2. 向 Registry 中推送镜像
+
+   ```
+   docker tag [imageId] image.paigpu.com/prod-xgmdbroksktnnznsisri/[image]:[tag]
+   ```
+   ```
+   docker push image.paigpu.com/prod-xgmdbroksktnnznsisri/[image]:[tag]
+   ```

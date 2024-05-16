@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "https://discord.com/invite/yntJ6VEX2J"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://www.infrai.com"
   },
   "tabs": [
     {
@@ -35,37 +35,46 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://docs.infrai.com"
     },
     {
       "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "icon": "discord",
+      "url": "https://discord.com/invite/yntJ6VEX2J"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Quickstart",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "quickstart/start",
+        "quickstart/prepare",
+        "quickstart/create",
+        "quickstart/manage",
+        "quickstart/storage",
+        "quickstart/ssh",
+        "quickstart/jupyter",
+        "quickstart/accelerate"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Billing",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "billing/payment-methods",
+        "billing/billing-methods"
+      ]
+    },
+    {
+      "group": "Terms",
+      "pages": [
+        "terms/service",
+        "terms/policy"
+      ]
+    },
+    {
+      "group": "FAQ",
+      "pages": [
+        "FAQ/intro"
       ]
     },
     {
@@ -77,15 +86,42 @@
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/list-clusters",
+        "api-reference/endpoint/list-products",
+        "api-reference/endpoint/get-instance",
+        "api-reference/endpoint/list-instances",
+        "api-reference/endpoint/create-instance",
+        "api-reference/endpoint/delete-instance",
+        "api-reference/endpoint/stop-instance",
+        "api-reference/endpoint/start-instance",
+        "api-reference/endpoint/list-network-storage",
+        "api-reference/endpoint/edit-network-storage",
+        "api-reference/endpoint/create-network-storage",
+        "api-reference/endpoint/delete-network-storage",
+        "api-reference/endpoint/list-templates",
+        "api-reference/endpoint/get-template",
+        "api-reference/endpoint/create-template",
+        "api-reference/endpoint/delete-template",
+        "api-reference/endpoint/edit-template",
+        "api-reference/endpoint/get-balance",
+        "api-reference/endpoint/list-transtions",
+        "api-reference/endpoint/list-bills",
+        "api-reference/endpoint/list-saving-plans",
+        "api-reference/endpoint/create-saving-plan",
+        "api-reference/endpoint/edit-saving-plan",
+        "api-reference/endpoint/list-saving-plan-templates",
+        "api-reference/endpoint/get-user-info",
+        "api-reference/endpoint/create-container-registry-auth",
+        "api-reference/endpoint/list-container-registry-auth",
+        "api-reference/endpoint/delete-container-registry-auth"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+    "x": "https://twitter.com/infrai_cloud",
+    "discord": "https://discord.com/invite/yntJ6VEX2J"
+  },
+  "openapi": [
+    "api-reference/openapi.json"
+  ]
 }
