@@ -1,36 +1,30 @@
 ---
-title: How to choose a GPU
+title: 如何挑选实例
 ---
 
-## Introduction
+## 何时应选择使用 GPU 实例？
 
-InfrAI offers a variety of GPU container cloud computing specifications to meet different virtualization capability needs, supporting a wide range of business applications and service scenarios.
+GPU 作为一种计算芯片，具有以下优势，非常适合需求高并行度的应用程序：
 
-Each computing specification is divided into several specification families based on hardware capability differences, with each family using different Intel processors, CPU/memory ratios, GPU cards, cloud disk types, and network card virtualization methods to achieve differentiated computing, storage, and network performance. Each family is further subdivided into various instance specifications, with higher specifications offering stronger performance.
+- 实时高速、强并行计算能力和强浮点计算能力。
+- 适用于使用数千个线程的工作负载。
+- 在图形处理中，面对大量计算要求，每个任务虽小，但通过管道执行的操作集合的吞吐量远比单个操作的延迟重要。
 
-## How to Choose a GPU
+## GPU 与 CPU 的区别是什么？
 
-| Model     | Memory   | Single Precision (FP32) | Half Precision (FP16) | Description                                                                                                                                                                                                                                             |
-| --------- | -------- | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tesla P40 | 24 GB    | 11.76 T                 | 11.76 T               | Based on the earlier Pascal architecture, suitable for tasks requiring large memory and using versions of cuda before 11.x.                                                                                                                             |
-| TITAN XP  | 12 GB    | 12.15 T                 | 12.15 T               | An older model under the Pascal architecture, a suitable entry-level choice for beginners.                                                                                                                                                              |
-| 1080 Ti   | 11 GB    | 11.34 T                 | 11.34 T               | A product of the same generation as TITAN XP, suitable for entry-level users, though its 11 GB memory may be limiting in some cases.                                                                                                                    |
-| 2080Ti    | 11 GB    | 13.45 T                 | 53.8 T                | Turing architecture GPU, offers good performance, especially suitable for mixed precision computing scenarios, with a high cost-performance ratio.                                                                                                      |
-| V100      | 16/32 GB | 15.7 T                  | 125 T                 | A high-end product designed for professional computing scenarios, especially suitable for high half-precision computing tasks, leading the previous generation of compute cards.                                                                        |
-| 3060      | 12 GB    | 12.74 T                 | About 24 T            | If the memory of 1080 Ti does not meet the requirements, 3060 provides a good alternative, especially suitable for beginners and requires the use of cuda 11.x.                                                                                         |
-| A4000     | 16 GB    | 19.17 T                 | About 76 T            | Balanced memory and computing power, suitable for intermediate users. Requires the use of cuda 11.x environment.                                                                                                                                        |
-| 3080Ti    | 12 GB    | 34.10 T                 | About 70 T            | Excellent performance output makes it an ideal choice for scenarios not requiring extreme memory. Requires the use of cuda 11.x.                                                                                                                        |
-| A5000     | 24 GB    | 27.77 T                 | About 117 T           | High-performance GPU, suitable for scenarios requiring large memory and high half-precision computing power. Requires the use of cuda 11.x.                                                                                                             |
-| 3090      | 24 GB    | 35.58 T                 | About 71 T            | Provides excellent performance and memory quota, suitable for a wide range of application scenarios, the first choice for cost-effectiveness. Requires the use of cuda 11.x.                                                                            |
-| A40       | 48 GB    | 37.42 T                 | 149.7 T               | Huge memory capacity, computing power close to 3090, suitable for computing tasks with extremely high memory requirements. Requires the use of cuda 11.x.                                                                                               |
-| A100 SXM4 | 40/80 GB | 19.5 T                  | 312 T                 | Top professional computing GPU, with huge memory and half-precision computing capability, suitable for the most complex computing tasks. Supports NVLink, optimized for multi-card parallel computing. Requires the use of cuda 11.x.                   |
-| 4090      | 24 GB    | 82.58 T                 | 165.2 T               | A new generation high-performance GPU, provides excellent single precision and half precision computing capability, suitable for scenarios with high cost-performance ratio. Apart from relatively small memory, it has almost no obvious shortcomings. |
+- **GPU** 拥有大量专注于处理大规模并发算术运算的算术运算单元（ALU）和相对简单的逻辑控制单元，适合于需要多线程并行的高吞吐量计算场景。
+- **CPU** 拥有强大的算术运算单元（ALU）和复杂的逻辑控制单元，适合于对响应速度要求较高且逻辑复杂的串行计算场景。
 
-## Notes
 
-- GPU instance prices and configuration options (system disk, data disk, public IP, etc.) can be viewed on the console page. These prices are for reference only, and the actual order on the InfrAI console shall prevail.
-- Instance specifications vary by region and availability zone; please refer to the actual display on the console.
-- GPU instances can only be changed within the same specification family. For detailed information, please refer to the document on modifying instance specifications.
-- For purchasing instances, please refer to purchasing GPU container cloud computing instances and purchasing high-performance computing GPU instances.
 
-**Actual supply is subject to the [GPU Market](https://console.infrai.com/).**
+## 如何查看 GPU 实例的价格？
+
+您可以在价格计算器页面查看 GPU 实例的价格及其配置项（系统盘、数据盘、公网 IP 等）费用。请注意，算力市场显示的为参考价格，具体以控制台实际下单结果为准。
+
+## 购买 GPU 实例后如何使用 GPU 资源？
+
+购买 GPU 实例后，操作系统需安装相应 NVIDIA 驱动以使用 GPU 资源。安装驱动的具体步骤，请参考快速入门 NVIDIA 驱动介绍。
+
+## 系统盘大小是多大的？
+
+目前，系统盘大小为 100 GB。我们将于4月下旬上线自定义系统盘大小功能，敬请期待。

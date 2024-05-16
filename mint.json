@@ -35,12 +35,7 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://docs.infrai.com"
-    },
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.com/invite/yntJ6VEX2J"
+      "url": "https://docs.paigpu.com"
     }
   ],
   "navigation": [
@@ -67,7 +62,6 @@
     {
       "group": "Terms",
       "pages": [
-        "terms/service",
         "terms/policy"
       ]
     },
@@ -76,52 +70,6 @@
       "pages": [
         "FAQ/intro"
       ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/list-clusters",
-        "api-reference/endpoint/list-products",
-        "api-reference/endpoint/get-instance",
-        "api-reference/endpoint/list-instances",
-        "api-reference/endpoint/create-instance",
-        "api-reference/endpoint/delete-instance",
-        "api-reference/endpoint/stop-instance",
-        "api-reference/endpoint/start-instance",
-        "api-reference/endpoint/list-network-storage",
-        "api-reference/endpoint/edit-network-storage",
-        "api-reference/endpoint/create-network-storage",
-        "api-reference/endpoint/delete-network-storage",
-        "api-reference/endpoint/list-templates",
-        "api-reference/endpoint/get-template",
-        "api-reference/endpoint/create-template",
-        "api-reference/endpoint/delete-template",
-        "api-reference/endpoint/edit-template",
-        "api-reference/endpoint/get-balance",
-        "api-reference/endpoint/list-transtions",
-        "api-reference/endpoint/list-bills",
-        "api-reference/endpoint/list-saving-plans",
-        "api-reference/endpoint/create-saving-plan",
-        "api-reference/endpoint/edit-saving-plan",
-        "api-reference/endpoint/list-saving-plan-templates",
-        "api-reference/endpoint/get-user-info",
-        "api-reference/endpoint/create-container-registry-auth",
-        "api-reference/endpoint/list-container-registry-auth",
-        "api-reference/endpoint/delete-container-registry-auth"
-      ]
     }
-  ],
-  "footerSocials": {
-    "x": "https://twitter.com/infrai_cloud",
-    "discord": "https://discord.com/invite/yntJ6VEX2J"
-  },
-  "openapi": [
-    "api-reference/openapi.json"
   ]
 }
