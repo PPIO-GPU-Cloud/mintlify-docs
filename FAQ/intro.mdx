@@ -28,3 +28,12 @@ GPU 作为一种计算芯片，具有以下优势，非常适合需求高并行�
 ## 系统盘大小是多大的？
 
 目前，系统盘大小为 100 GB。
+
+## 如何查看进程？
+由于实例均为 Docker 容器，因容器 PID 隔离限制，无法使用 ```nvidia-smi``` 命令查看进程。
+您可以安装 ```py3nvml``` 库，通过 Python 代码查看进程。具体安装及使用方法，请参考 [py3nvml 库](https://github.com/gpuopenanalytics/py3nvml)。
+
+```
+pip install py3nvml 
+py3smi
+```
