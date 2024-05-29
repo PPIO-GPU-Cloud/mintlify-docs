@@ -34,6 +34,7 @@
         "quickstart/create",
         "quickstart/manage",
         "quickstart/storage",
+        "quickstart/images",
         "quickstart/ssh",
         "quickstart/jupyter",
         "quickstart/accelerate"
